@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+  <title>IP Address Tracker</title>
+
+ <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+
+</head>
+
+<body>
+  <header class="top-page">
+    <div class="titre-search-bar">
+      <h1 class="titre">IP Adress Tracker</h1>
+    </div>
+      <form id="form">
+        <div class="search-bar">
+          <input type="text" id="search" class="search-bar__input" name="search" placeholder="Search for any IP address or domain" autocomplete="off" aria-label="Search for any IP address or domain">
+          <button type="submit" class="search-bar__button">
+            <img alt="Search by IP Address or Domain" src="images/icon-arrow.svg"/>
+      </form>  
+    </div>
+    <div class="resultat">
+      <ul class="resultat-carte">
+        <li class="resultat-carte-item">
+          <h2 class="resultat-carte-titre">IP Address</h2>
+          <p class="resultat-carte-valeur" id="IpAddress">-</p>
+        </li>
+        <hr>
+        <li class="resultat-carte-item">
+          <h2 class="resultat-carte-titre">Location</h2>
+          <p class="resultat-carte-valeur" id="Location">-</p>
+        </li>
+        <hr>
+        <li class="resultat-carte-item">
+          <h2 class="resultat-carte-titre">Timezone</h2>
+          <p class="resultat-carte-valeur" id="Timezone">-</p>
+        </li>
+        <hr>
+        <li class="resultat-carte-item">
+          <h2 class="resultat-carte-titre">ISP</h2>
+          <p class="resultat-carte-valeur" id="ISP">-</p>
+        </li>     
+      </ul>
+    </div>
+  </header>
+  <section class="carte">
+    <div id="mapid">
+    </div>
+  </section>
+      <script src="js-main.js"></script>
+  </body>
+</html>
